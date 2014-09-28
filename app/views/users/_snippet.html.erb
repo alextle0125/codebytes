@@ -1,10 +1,6 @@
 <div class="snippet">
 	<% if snippet.tags %>
-			<%= link_to "remove", remove_snippet_path(user_id: session[:user_id], id: snippet.id), 'class' => "edit-delete-link", data: { confirm: "Are you sure you want to remove this snippet from your cheatsheet?" }, 'data-no-turbolink' => true %>
-			<% if snippet.author.id == session[:user_id] %>
-				<%= link_to "edit", edit_snippet_path(snippet.id), 'class' => "edit-delete-link", 'data-no-turbolink' => true %>
-			<% end %>
-			<h2 class="snippet-title" ><%= snippet.title %><span class="author">by <%= snippet.author.email %></h2>
+
 		<div class="tag-list">
 			<ul class="tags">
 			<% snippet.tags.each do |tag| %>
@@ -12,6 +8,13 @@
 			<% end %>
 			</ul>
 		</div>
+		
+		<%= link_to "remove", remove_snippet_path(user_id: session[:user_id], id: snippet.id), 'class' => "edit-delete-link", data: { confirm: "Are you sure you want to remove this snippet from your cheatsheet?" }, 'data-no-turbolink' => true %>
+		<% if snippet.author.id == session[:user_id] %>
+			<%= link_to "edit", edit_snippet_path(snippet.id), 'class' => "edit-delete-link", 'data-no-turbolink' => true %>
+		<% end %>
+		
+		<h2 class="snippet-title" ><%= snippet.title %><span class="author">by <%= snippet.author.email %></h2>
 		<div id="snippet-readonly" class="editor readonly" alt="<%=snippet.language%>" data-no-turbolink><%= snippet.code %></div>
 	<% end %>
 </div>
