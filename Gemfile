@@ -51,8 +51,10 @@ gem 'rake'
 
 
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Use Thin as the app server
+group :production do
+	gem 'thin'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
