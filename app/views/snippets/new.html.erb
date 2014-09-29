@@ -7,7 +7,6 @@
 <% if session[:user_id] %>
 	<div class="caption">Upload your code...</div>
 	<%= render 'form'%>
-	<div class="new-snippet-description"><p>Description</p></div>
 <% else %>
 	<%= render 'users/form' %>
 <% end %>

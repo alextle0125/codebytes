@@ -68,9 +68,15 @@ $(function () {
 		console.log(textarea.val())
 	  //  textarea.val(editor.getSession().getValue());
 	})*/
-
-
-
 })
+
+$(document).ready(function(){
+
+	snippet = $('div.snippet');
+
+	snippet.click(function(event){
+		console.log(event.currentTarget);
+	})
+});
 
 

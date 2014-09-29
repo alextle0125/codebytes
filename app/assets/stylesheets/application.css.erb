@@ -51,19 +51,61 @@
   text-align: left;
 }
 
+.snippet-click {
+  padding-top: 270px;
+  padding-bottom: 15px;
+}
+
 .snippet {
   display: inline-block;
-	margin-bottom: 20px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
-  width: 600px;
+  width: 650px;
+  z-index: 99;
 }
 
-div.snippet a.edit-delete-link {
+div.snippets_container a.add-link {
   position: relative;
   float: right;
-  padding: 10px;
+  margin-top: -210px;
+  margin-right: 35px;
+  color: #e478b8;
+  text-decoration: none;
+}
+
+div.snippets_container a.remove-link {
+  position: relative;
+  float: right;
+  margin-top: -210px;
+  margin-right: 35px;
+  color: #e478b8;
+  text-decoration: none;
+}
+
+div.snippets_container a.sheet-edit-link {
+  position: relative;
+  float: right;
+  margin-top: -210px;
+  margin-right: 120px;
+  color: #e478b8;
+  text-decoration: none;
+}
+
+div.snippets_container a.edit-link {
+  position: relative;
+  float: right;
+  margin-top: -210px;
+  margin-right: 95px;
+  color: #e478b8;
+  text-decoration: none;
+}
+
+div.snippets_container a.delete-link {
+  position: relative;
+  float: right;
+  margin-top: -210px;
+  margin-right: 155px;
   color: #e478b8;
   text-decoration: none;
 }
@@ -114,42 +156,34 @@ body {
   overflow-y: scroll;
 }
 
-.new-snippet-description {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  margin-top: 125px;
-  margin-left: 25px;
-  margin-right: 25px;
-  text-align: center;
-  width: 555px;
-  height: 569px;
-  background: #464646;
-  color: #eeebd8;
-  opacity: 0.70;
-}
-
 .description p{
   margin-top: 45%;
 }
 
-.new-snippet-description {
+.edit-snippet-description {
   display: inline-block;
   position: absolute;
   top: 0;
-  margin-top: 125px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-top: 135px;
+  margin-left: 650px;
   text-align: center;
   width: 555px;
   height: 569px;
   background: #464646;
   color: #eeebd8;
+  font-size: 24px;
   opacity: 0.70;
 }
 
-.new-snippet-description p {
-  margin-top: 45%;
+.edit-description {
+  padding: 40px;
+  padding-bottom: 52px;
+  background: #464646;
+  text-align: left;
+  font-family: Courier New;
+  font-size: 22px;
+  color: #eeebd8;
+  border: none;
 }
 
 .snippet-description {
@@ -158,6 +192,7 @@ body {
   margin-left: 25px;
   margin-right: 25px;
   text-align: center;
+  font-family: Courier New;
   width: 555px;
   height: 569px;
   background: #464646;
@@ -468,7 +503,8 @@ footer {
 }
 
 .tag-list {
-  margin-left: -5%;
+  margin-left: -50px;
+  padding: 15px;
 }
 
 .tags {

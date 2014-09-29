@@ -24,8 +24,7 @@ class SnippetsController < ApplicationController
 
 	def show
 		@search_by_title = Snippet.search(params[:q])
-		@user = User.find(session[:user_id])
-		redirect_to user_path(@user)
+		@snippet = Snippet.find(params[:id])
 	end
 
 	def new
