@@ -1,0 +1,571 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+  margin: 0;
+ }
+
+ html, body {
+  height: 100%;
+ }
+
+.field {
+  display: inline;
+}
+
+.snippet-editor {
+	position: relative;
+  background-color: #333;
+}
+
+.editor {
+	width:600px;
+	height:150px;
+	position:relative;
+  margin-top: 10px;
+  margin-left: 25px;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+  text-align: left;
+}
+
+.editor-new {
+  width:600px;
+  height:150px;
+  position:relative;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.snippet {
+  display: inline-block;
+	margin-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  width: 600px;
+}
+
+div.snippet a.edit-delete-link {
+  position: relative;
+  float: right;
+  padding: 10px;
+  color: #e478b8;
+  text-decoration: none;
+}
+
+.add_button {
+  display: block;
+  position: relative;
+  margin-left: 600px;
+  padding: 5px;
+}
+
+h2.snippet-title {
+  display: inline;
+  font-size: 30px;
+  color: #464646;
+}
+
+span.author {
+  display: block;
+  margin-left: 15px;
+  font-weight: lighter;
+  font-size: 22px;
+  color: #464646;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #eeebd8;
+  color: #333;
+  width: 100%;
+}
+
+.container {
+  min-height: 525px;
+  margin: 0 auto -4em;
+  padding-top: 125px;
+  text-align: center;
+  width: 100%;
+}
+
+.snippets_container {
+  display: inline-block;
+  height: 545px;
+  width: 700px;
+  margin-left: 25px;
+  padding-top: 25px;
+  background: #fff;
+  overflow-y: scroll;
+}
+
+.new-snippet-description {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  margin-top: 125px;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  width: 555px;
+  height: 569px;
+  background: #464646;
+  color: #eeebd8;
+  opacity: 0.70;
+}
+
+.description p{
+  margin-top: 45%;
+}
+
+.new-snippet-description {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  margin-top: 125px;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  width: 555px;
+  height: 569px;
+  background: #464646;
+  color: #eeebd8;
+  opacity: 0.70;
+}
+
+.new-snippet-description p {
+  margin-top: 45%;
+}
+
+.snippet-description {
+  display: inline-block;
+  position: absolute;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  width: 555px;
+  height: 569px;
+  background: #464646;
+  color: #eeebd8;
+  opacity: 0.70;
+}
+
+.snippet-description p {
+  margin-top: 45%;
+}
+
+.cheatsheet-description {
+  display: inline-block;
+  position: absolute;
+  margin-top:40px;
+  margin-left: 50px;
+  margin-right: 25px;
+  text-align: center;
+  width: 475px;
+  height: 480px;
+  background: #464646;
+  color: #eeebd8;
+  opacity: 0.70;
+}
+
+.cheatsheet-description p {
+  margin-top: 45%;
+}
+
+.view {
+  margin: 2% auto;
+  height: 475px;
+  width: 500px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #999;
+}
+
+.view a{
+  color: #70DBFF;
+}
+
+.form-elements {
+  padding-top: 80px;
+}
+
+.form {
+  text-align: right;
+  margin-right: 35%;
+}
+
+h1 a {
+  color: #113F8C;
+  text-decoration: none;
+  position: absolute;
+  font-size: 30px;
+  top: 26px;
+  left: 26px;
+}
+
+div.logo{
+  width: 300px;
+  height: 100px;
+  margin-left: 10px;
+  background-image: url("codebytes_logo.png");
+  z-index: 99;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  background: #464646;
+  border-bottom: 5px solid #250f17;
+  z-index: 99;
+}
+
+nav a {
+  color: #F2F1EF;
+  text-decoration: none;
+}
+
+nav ul {
+  padding: 10px;
+  position: relative;
+  float: right;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a{
+  margin-left: 10px;
+}
+
+#snippet_search {
+  position: absolute;
+  right: 0;
+  padding-top: 25px;
+  width: 365px;
+}
+
+.search-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #594048;
+  border: 2px solid #271119;
+  border-radius: 25px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #8fff8f;
+  cursor: pointer;
+}
+
+.container{
+  text-align: left;
+}
+
+#sidebar-wrapper {
+  top: 90px;
+  width: 165px;
+  background: #104a75;
+  overflow-y: scroll; 
+  z-index: 98;
+}
+
+.cheatsheet{
+  display: inline-block;
+  margin-top: -50px;
+  margin-left: 170px;
+  width: 50%;
+}
+
+ul.sidebar-nav {
+  width: 165px;
+  font-size: 11px;
+}
+
+ul.sidebar-nav li.sidebar-brand a {
+  color: #fff;
+}
+
+ul.sidebar-flat{
+  position: relative;
+  float: right;
+  margin-top: -70px;
+  margin-right: 110px;
+}
+
+ul.sidebar-flat li.code-button{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url("codebytes.png");
+  opacity: 0.75;
+}
+
+ul.sidebar-flat li.sheet-button{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url("cheatsheets.png");
+  opacity: 0.75;
+}
+
+ul.sidebar-flat li.upload-button{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url("upload.png");
+  opacity: 0.75;
+}
+
+ul.sidebar{
+  position: fixed;
+  float: right;
+  right: 0;
+  height: 400px;
+  list-style-type: none;
+  z-index: 99;
+}
+
+ul.sidebar li.code-button{
+  width: 100px;
+  height: 100px;
+  background-image: url("codebytes.png");
+  opacity: 0.75;
+}
+
+ul.sidebar li.sheet-button{
+  width: 100px;
+  height: 100px;
+  background-image: url("cheatsheets.png");
+  opacity: 0.75;
+}
+
+ul.sidebar li.upload-button{
+  width: 100px;
+  height: 100px;
+  background-image: url("upload.png");
+  opacity: 0.75;
+}
+
+ul.sidebar li.active {
+  opacity: 1;
+}
+
+ul.sidebar-flat li.active {
+  opacity: 1;
+}
+
+div.form-elements span.close-tags {
+  color: #8fff8f;
+}
+
+div.form-elements span.brand {
+  color: #e478b8;
+}
+
+div.caption{
+  margin-top: 75px;
+  margin-left: 75px;
+  font-family: captionFont;
+  font-size: 65px;
+  color: #254a66;
+}
+
+.click_create_snippet {
+  text-align: center;
+  border: 1px solid #fff;
+  color: #000;
+  background-color: #fff;
+  visibility: hidden;
+}
+
+.create-snippet {
+	margin-bottom:20px;
+  color: #fff;
+}
+
+.create-snippet h3 {
+  cursor:pointer;
+}
+.create-snippet form.new_snippet {
+  display:none;
+}
+.create-snippet .field, .edit-snippet .field {
+  margin:5px 0;
+  display:block;
+}
+.new_snippet, .edit_snippet {
+  padding:10px 0;
+}
+.create-snippet input, .edit_snippet input {
+  /*padding:2px 4px;*/
+}
+.new_snippet label, .edit_snippet label {
+  margin-bottom:5px;
+}
+.new_snippet, .edit_snippet {
+  display: inline-block;
+  /*max-width: 600px;*/
+  margin: 10px 10px 0 75px;
+  text-align: left;
+  color: #fff;
+  background: #272822;
+}
+
+.editor-title {
+  font-size: 24px;
+  margin-top: -10px;
+  margin-left: 6px;
+}
+
+.editor-submit {
+  position: relative;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+footer, .push {
+  height: 4em;
+}
+
+footer {
+  font-weight: lighter;
+  line-height: 20px;
+  letter-spacing: 1px;
+  height: 100px;
+  background: #454545;
+  color: #F2F1EF;
+}
+.form-errors ul {
+	padding-left:0;
+	margin-bottom:20px;
+	color:red;
+	list-style:none;
+}
+.notice {
+	color:red;
+}
+.field_with_errors {
+	display:inline;
+}
+
+.tag-list {
+  margin-left: -5%;
+}
+
+.tags {
+  list-style: none;
+  margin: 0 0 0 25px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #144B73;
+  border-radius: 3px 0 0 3px;
+  color: #ffffff;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 23px 0 23px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #144B73;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@font-face {
+  font-family: captionFont;
+  src: url(./fonts/SnellRoundhand-Bold.eot),
+       url(./fonts/SnellRoundhand-Bold.woff),
+       url(./fonts/SnellRoundhand-Bold.ttf),
+       url(./fonts/SnellRoundhand-Bold.svg)
+}
+
+@media screen and (max-width: 1440px){
+  .cheatsheet{
+    display: inline-block;
+    margin-top: -50px;
+    margin-left: 170px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .snippet {
+    display:block;
+  }
+}
+
+@media screen and (max-width: 829px){
+  .snippets_container {
+    display: block;
+    height: 275px;
+  }
+  .description {
+    display: block;
+    margin-top: 10px;
+    height: 200px;
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 799px){
+  .snippets_container {
+    position: absolute;
+  }
+  .description {
+    position: relative;
+    margin-top: 310px;
+  }
+}
+
+@media screen and (max-width: 679px){
+  #snippet_search {
+    margin-top: 40px;
+  }
+}
