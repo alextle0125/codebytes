@@ -129,6 +129,25 @@ body {
   opacity: 0.70;
 }
 
+.description p{
+  margin-top: 45%;
+}
+
+.new-snippet-description {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  margin-top: 125px;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  width: 555px;
+  height: 569px;
+  background: #464646;
+  color: #eeebd8;
+  opacity: 0.70;
+}
+
 .new-snippet-description p {
   margin-top: 45%;
 }
