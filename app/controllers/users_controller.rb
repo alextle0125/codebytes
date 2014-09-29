@@ -1,9 +1,21 @@
 class UsersController < ApplicationController
 
+  def index
+    redirect_to root_path
+  end
+
   def show
     @search_by_title = Snippet.search(params[:q])
     @user = User.find(params[:id])
     @cheatsheets = @user.cheatsheets.all
+    @snippets = @user.cheatsheets.first.snippets
+    @tags = []
+    @snippets.each do |snippet| 
+      snippet.tags.each do |tag| 
+        @tags << tag.title
+      end
+    end
+    @tags.uniq!
   end
 
   def new
