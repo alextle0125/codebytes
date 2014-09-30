@@ -15,6 +15,9 @@
 		<%= label_tag :tag_list, "Tags (separated by commas)" %><br />
 	  <%= text_field_tag :tag_list, '', placeholder: "Add some tags (comma separated please)", size: "115"%>
 	</div>
+	<div class="edit-snippet-description">
+	  	<%= f.text_area :description, cols: 35, rows: 19, placeholder: "Write a description about your code here...", 'class' => "edit-description" %>
+	</div>
 
 	<div class="actions">
 		<%=f.submit "Create Snippet", 'class' => "editor-submit" %>

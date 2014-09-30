@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :snippets
 
+  get 'snippets/:id/describe' => 'snippets#describe'
+
   get 'users/login' => 'session#new'
   post 'users/login' => 'session#create'
   delete 'users/logout' => 'session#destroy'
