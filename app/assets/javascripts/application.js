@@ -72,11 +72,32 @@ $(function () {
 
 $(document).ready(function(){
 
-	snippet = $('div.snippet');
+	snippet = $('div.snippet'); 
+	indexDescriptionContainer = $('div.snippet-description');
+	sheetDescriptionContainer = $('div.cheatsheet-description');
 
 	snippet.click(function(event){
-		console.log(event.currentTarget);
+		event.preventDefault();
+		console.log(event.currentTarget.parentElement.href);
+		if(indexDescriptionContainer.length > 0){
+			indexDescriptionContainer.empty();
+		} else if (sheetDescriptionContainer.length > 0){
+			sheetDescriptionContainer.empty();
+		}
+
+		$.ajax(event.currentTarget.parentElement.href, {
+			type: 'GET',
+		}).done(function(responseText){
+			var parsedResponse = responseText.match(/<description>(.*)/);		
+			console.log(parsedResponse);
+			if(indexDescriptionContainer.length > 0){
+				indexDescriptionContainer.html(parsedResponse[0]);
+			} else if(sheetDescriptionContainer.length > 0){
+				sheetDescriptionContainer.html(parsedResponse[0]);
+			}
+		})
 	})
+
 });
 
 

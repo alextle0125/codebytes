@@ -25,6 +25,12 @@ class SnippetsController < ApplicationController
 	def show
 		@search_by_title = Snippet.search(params[:q])
 		@snippet = Snippet.find(params[:id])
+		@snippet
+	end
+
+	def describe
+		@search_by_title = Snippet.search(params[:q])
+		@snippet = Snippet.find(params[:id])
 	end
 
 	def new
