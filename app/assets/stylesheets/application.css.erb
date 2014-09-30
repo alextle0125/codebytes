@@ -157,8 +157,10 @@ body {
   overflow-y: scroll;
 }
 
-.description p{
-  margin-top: 45%;
+.description {
+  margin: 10% auto;
+  padding: 25px;
+  text-align: left;
 }
 
 .edit-snippet-description {
@@ -190,12 +192,10 @@ body {
 .snippet-description {
   display: inline-block;
   position: absolute;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-top: 30px;
+  margin-right: 50px;
   text-align: center;
   font-family: Courier New;
-  width: 555px;
-  height: 569px;
   background: #464646;
   color: #eeebd8;
   opacity: 0.70;
@@ -203,25 +203,23 @@ body {
 
 .snippet-description p {
   margin-top: 45%;
+  padding: 2%;
 }
 
 .cheatsheet-description {
   display: inline-block;
   position: absolute;
   margin-top:40px;
-  margin-left: 50px;
-  margin-right: 25px;
+  margin-right: 50px;
   text-align: center;
   font-family: Courier New;
-  width: 475px;
-  height: 480px;
   background: #464646;
   color: #eeebd8;
   opacity: 0.70;
 }
 
 .cheatsheet-description p {
-  margin-top: 45%;
+  padding: 2%;
 }
 
 .view {
@@ -584,21 +582,11 @@ footer {
     display: block;
     height: 275px;
   }
-  .description {
-    display: block;
-    margin-top: 10px;
-    height: 200px;
-    width: 94%;
-  }
 }
 
 @media screen and (max-width: 799px){
   .snippets_container {
     position: absolute;
-  }
-  .description {
-    position: relative;
-    margin-top: 310px;
   }
 }
 
