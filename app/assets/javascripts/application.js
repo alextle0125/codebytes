@@ -78,7 +78,6 @@ $(document).ready(function(){
 
 	snippet.click(function(event){
 		event.preventDefault();
-		console.log(event.currentTarget.parentElement.href);
 		if(indexDescriptionContainer.length > 0){
 			indexDescriptionContainer.empty();
 		} else if (sheetDescriptionContainer.length > 0){
@@ -88,11 +87,13 @@ $(document).ready(function(){
 		$.ajax(event.currentTarget.parentElement.href, {
 			type: 'GET',
 		}).done(function(responseText){
-			var parsedResponse = responseText.match(/<description>(.*)/);		
-			console.log(parsedResponse);
+			var parsedResponse = responseText.match(/<div class="description">([^]+)/);
+
 			if(indexDescriptionContainer.length > 0){
+				indexDescriptionContainer.css("font-size", "22px");
 				indexDescriptionContainer.html(parsedResponse[0]);
 			} else if(sheetDescriptionContainer.length > 0){
+				sheetDescriptionContainer.css("font-size", "18px");
 				sheetDescriptionContainer.html(parsedResponse[0]);
 			}
 		})
