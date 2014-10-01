@@ -1,4 +1,24 @@
-<ul class="sidebar">
+	<form class="filter" action="/snippets" method="GET">
+	  <label>Languages:</label>
+	  <select id="languages" name="languages">
+	    <option value="None">None</option>
+	    <option value="Ruby">Ruby</option>
+	    <option value="Javascript">Javascript</option>
+	    <option value="HTML">HTML</option>
+	    <option value="CSS">CSS</option>
+	  </select>
+	  <label>Filter by:</label>
+	  <input type="radio" name="filter" value="Snip Count" checked="checked">
+	  <label>Snip Count</label>
+	  <input type="radio" name="filter" value="Most Recent">
+	  <label>Most Recent</label>
+	  <input type="radio" name="filter" value="Oldest">
+	  <label>Oldest</label>
+	  <input type="radio" name="filter" value="Random 5">
+	  <label>Random 5</label>
+	  <input type="submit">
+	</form>
+<ul class="sidebar-flat-index">
 	<% if session[:user_id] %>
 		<a href="/"><li class="code-button active" data-no-turbolink></li></a>
 		<a href="/users/<%= session[:user_id] %>" data-no-turbolink><li class="sheet-button"></li></a>
@@ -17,5 +37,6 @@
 </div>
 
 <div class="snippet-description"><p>"Click on  a code snippet for it's description"<p></div>
+
 
 

@@ -8,6 +8,21 @@ class CheatsheetsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @cheatsheets = @user.cheatsheets.find(params[:id])
+    @snippets = @cheatsheets.snippets.includes(:tags).where("tags.title" => params[:filter])
+  end
+
+  def filter
+    @search_by_title = Snippet.search(params[:q])
+    @user = User.find(params[:user_id])
+    @cheatsheets = @user.cheatsheets.find(params[:id])
+    @snippets = @cheatsheets.snippets.includes(:tags).where("tags.title" => params[:filter])
+    @tags = []
+    @cheatsheets.snippets.each do |snippet| 
+      snippet.tags.each do |tag| 
+        @tags << tag.title
+      end
+    end
+    @tags.uniq!
   end
 
   def create
