@@ -561,27 +561,104 @@ footer {
   }
 }
 
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 1420px){
+  ul.sidebar-flat {
+    width: 100px;
+  } 
+  .cheatsheet-description {
+    position: relative;
+    margin-top: 25px;
+    margin-left: 195px;
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
   .snippet {
     display:block;
   }
 }
 
-@media screen and (max-width: 829px){
+@media screen and (max-width: 1165px) {
+  ul.sidebar-flat {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  ul.sidebar-flat {
+    width: 375px;
+  }
+}
+
+@media screen and (max-width: 829px) {
   .snippets_container {
     display: block;
     height: 275px;
   }
-}
-
-@media screen and (max-width: 799px){
-  .snippets_container {
-    position: absolute;
+  .snippet-description {
+    display: block;
+    margin-top: 25px;
   }
 }
 
-@media screen and (max-width: 679px){
+@media screen and (max-width: 780px) {
+  .edit-snippet-description {
+    margin-top: 585px;
+    margin-left: 0px;
+  }
+  ul.sidebar {
+    position: absolute;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  div.snippets_container a.add-link {
+    position: relative;
+    float: left;
+    margin-top: -15px;
+    margin-left: 15%;
+    padding: 0px 5% 0px 5%;
+  }
+  div.snippets_container a.edit-link {
+    position: relative;
+    float: left;
+    margin-top: -15px;
+    padding: 0px 5% 0px 10%;
+  }
+  div.snippets_container a.delete-link {
+    position: relative;
+    float: left;
+    margin-top: -15px;
+    margin-right: 0px;
+    padding: 0px 5% 0px 5%;
+  }
+}
+
+@media screen and (max-width: 679px) {
   #snippet_search {
     margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .edit-snippet-description {
+    margin-top: 675px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  ul.sidebar-nav {
+    margin-top: 135px;
+  }
+  ul.sidebar-flat {
+    z-index: 99;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  ul.sidebar-flat-index {
+    margin-right: 50px;
   }
 }
