@@ -8,66 +8,75 @@ class SnippetsController < ApplicationController
 		@results_by_tags = @search_by_tags.result(distinct: true)
 
 		# With an increasing database, consider pagination offset by 25
-		case params[:languages]
-			when "None"
-				case params[:filter]
-					when "Snip Count"
-						@snippets = Snippet.all.order(snip_count: :desc)
-					when "Most Recent"
-						@snippets = Snippet.all.order(created_at: :desc)
-					when "Oldest"
-						@snippets = Snippet.all.order(created_at: :asc)
-					when "Random 5"
-						5.times { @snippets << Snippet.all.sample }		
+		
+		if @results_by_title || @results_by_tags
+			@results_by_title.order("snip_count DESC").each{ |snippet| @snippets << snippet }
+			@results_by_tags.each do |tag|
+				tag.snippets.order("snip_count DESC").each do |snippet| @snippets << snippet
 				end
-			when "Ruby"
-				case params[:filter]
-					when "Snip Count"
-						@snippets = Snippet.where(language: "ruby").order(snip_count: :desc)
-					when "Most Recent"
-						@snippets = Snippet.where(language: "ruby").order(created_at: :desc)
-					when "Oldest"
-						@snippets = Snippet.where(language: "ruby").order(created_at: :asc)
-					when "Random 5"
-						5.times { @snippets << Snippet.where(language: "ruby").sample }	
-				end		
-			when "Javascript"
-				case params[:filter]
-					when "Snip Count"
-						@snippets = Snippet.where(language: "javascript").order(snip_count: :desc)
-					when "Most Recent"
-						@snippets = Snippet.where(language: "javascript").order(created_at: :desc)
-					when "Oldest"
-						@snippets = Snippet.where(language: "javascript").order(created_at: :asc)
-					when "Random 5"
-						5.times { @snippets << Snippet.where(language: "javascript").sample }	
-				end	
-			when "HTML"
-				case params[:filter]
-					when "Snip Count"
-						@snippets = Snippet.where(language: "html").order(snip_count: :desc)
-					when "Most Recent"
-						@snippets = Snippet.where(language: "html").order(created_at: :desc)
-					when "Oldest"
-						@snippets = Snippet.where(language: "html").order(created_at: :asc)
-					when "Random 5"
-						5.times { @snippets << Snippet.where(language: "html").sample }	
+			end
+			@snippets.uniq!
+		else
+			case params[:languages]
+				when "None"
+					case params[:filter]
+						when "Snip Count"
+							@snippets = Snippet.all.order(snip_count: :desc)
+						when "Most Recent"
+							@snippets = Snippet.all.order(created_at: :desc)
+						when "Oldest"
+							@snippets = Snippet.all.order(created_at: :asc)
+						when "Random 5"
+							5.times { @snippets << Snippet.all.sample }		
 					end
-			when "CSS"
-				case params[:filter]
-					when "Snip Count"
-						@snippets = Snippet.where(language: "css").order(snip_count: :desc)
-					when "Most Recent"
-						@snippets = Snippet.where(language: "css").order(created_at: :desc)
-					when "Oldest"
-						@snippets = Snippet.where(language: "css").order(created_at: :asc)
-					when "Random 5"
-						5.times { @snippets << Snippet.where(language: "css").sample }	
-				end
-			else
-			@snippets = Snippet.all.order(snip_count: :desc).limit(25)
+				when "Ruby"
+					case params[:filter]
+						when "Snip Count"
+							@snippets = Snippet.where(language: "ruby").order(snip_count: :desc)
+						when "Most Recent"
+							@snippets = Snippet.where(language: "ruby").order(created_at: :desc)
+						when "Oldest"
+							@snippets = Snippet.where(language: "ruby").order(created_at: :asc)
+						when "Random 5"
+							5.times { @snippets << Snippet.where(language: "ruby").sample }	
+					end		
+				when "Javascript"
+					case params[:filter]
+						when "Snip Count"
+							@snippets = Snippet.where(language: "javascript").order(snip_count: :desc)
+						when "Most Recent"
+							@snippets = Snippet.where(language: "javascript").order(created_at: :desc)
+						when "Oldest"
+							@snippets = Snippet.where(language: "javascript").order(created_at: :asc)
+						when "Random 5"
+							5.times { @snippets << Snippet.where(language: "javascript").sample }	
+					end	
+				when "HTML"
+					case params[:filter]
+						when "Snip Count"
+							@snippets = Snippet.where(language: "html").order(snip_count: :desc)
+						when "Most Recent"
+							@snippets = Snippet.where(language: "html").order(created_at: :desc)
+						when "Oldest"
+							@snippets = Snippet.where(language: "html").order(created_at: :asc)
+						when "Random 5"
+							5.times { @snippets << Snippet.where(language: "html").sample }	
+						end
+				when "CSS"
+					case params[:filter]
+						when "Snip Count"
+							@snippets = Snippet.where(language: "css").order(snip_count: :desc)
+						when "Most Recent"
+							@snippets = Snippet.where(language: "css").order(created_at: :desc)
+						when "Oldest"
+							@snippets = Snippet.where(language: "css").order(created_at: :asc)
+						when "Random 5"
+							5.times { @snippets << Snippet.where(language: "css").sample }	
+					end
+				else
+				@snippets = Snippet.all.order(snip_count: :desc).limit(25)
+			end
 		end
-
 	    @snippet = Snippet.new
 	end
 

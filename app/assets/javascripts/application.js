@@ -90,6 +90,7 @@ $(document).ready(function(){
 			var parsedResponse = responseText.match(/<div class="description">([^]+)/);
 
 			if(indexDescriptionContainer.length > 0){
+				indexDescriptionContainer.css("margin-left", "25px");
 				indexDescriptionContainer.css("font-size", "22px");
 				indexDescriptionContainer.html(parsedResponse[0]);
 			} else if(sheetDescriptionContainer.length > 0){
