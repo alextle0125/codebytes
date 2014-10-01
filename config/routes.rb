@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get 'users/:user_id/cheatsheets/newsnippet/:id' => 'cheatsheets#add_snippet', as: 'add_snippet'
   get 'users/:user_id/cheatsheets/removesnippet/:id' => 'cheatsheets#remove_snippet', as: 'remove_snippet'
+  get 'users/:user_id/cheatsheets/:id/:filter' => 'cheatsheets#filter', as: 'filter'
 
   resources :users do
     resources :cheatsheets
