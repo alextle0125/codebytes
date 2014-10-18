@@ -2,7 +2,11 @@ codebytes
 ========
 
 #Summary & Intentions
-Originally called snippets in the early development stage and renamed to codebytes. codebytes is a web-based application built on a vision: to connect developers and help beginning developers learn to code. codebytes is a resource hub for code snippets. A user-based community for developers to upload useful code and build their own code reference sheets.
+Originally called snippets in the early development stage and renamed to codebytes. codebytes is a web-based application built on a vision: to connect developers and help beginning developers learn to code. codebytes is a resource hub for code snippets. A user-based community for developers to upload useful code and build their own code reference sheets. You can find the deployed version of this app following the link below:
+
+http://codebytes-.herokuapp.com/
+
+You are encouraged to contribute to our library and use codebytes as a reference tool for your coding. We will be making updates gradually.
 
 ##Intentions
 To develop a resource for beginning and professional developers to connect and share code. At times, coding can be exhausting and memory short-circuits. codebytes resolves this issue by providing a place where developers can reference useful and frequented code. codebytes could be useful to developers who are contributing to a larger project like an extension library or an application - providing a space for developers to share integral parts for building libraries or larger applications.
