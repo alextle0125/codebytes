@@ -12,11 +12,11 @@ You are encouraged to contribute to our library and use codebytes as a reference
 To develop a resource for beginning and professional developers to connect and share code. At times, coding can be exhausting and memory short-circuits. codebytes resolves this issue by providing a place where developers can reference useful and frequented code. codebytes could be useful to developers who are contributing to a larger project like an extension library or an application - providing a space for developers to share integral parts for building libraries or larger applications.
 
 #Sub-modules and Libraries
-*Rails 4
-*Ace (Ajax.org Cloud9 Editor)
-*Bootstrap.js
-*BCrypt
-*Ransack
+* Rails 4
+* Ace (Ajax.org Cloud9 Editor)
+* Bootstrap.js
+* BCrypt
+* Ransack
 
 ##Rails 4
 This application runs on the Ruby-on-Rails 4 web framework.
